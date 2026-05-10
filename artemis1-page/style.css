@@ -1,0 +1,342 @@
+/* Стилі для сторінки Artemis I */
+@font-face {
+    font-family: "Baskervville SC";
+    src: url("../fonts/BaskervvilleSC-Regular.ttf");
+}
+@font-face {
+    font-family: 'Cinzel';
+    src: url("../fonts/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Bungee Hairline";
+    src: url("../fonts/BungeeHairline-Regular.ttf");
+}
+
+/* Анімація появи */
+@keyframes appear{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+/* Основні стилі тіла */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: appear 2s linear;
+}
+
+/* Фонове відео */
+#background_video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Контейнер верхнього банера */
+.top_banner_container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+/* Текст верхнього банера */
+.top_banner_text {
+    margin-left: 40px;
+    text-align: center;
+    font-family: "Baskervville SC";
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Логотип Artemis */
+.artemis1-logo, .artemis2-logo, .artemis3-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 40px 0;
+}
+
+/* Текст логотипу */
+.logo_text {
+    font-family: 'Baskervville SC';
+    font-size: 128px;
+    color: #A8A8A8;
+    text-shadow: 0px 4px 82.2px #FFFFFF;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* Контейнер верхньої секції */
+.top_page_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 10%;
+    gap: 50px;
+}
+
+/* Зображення верхньої секції */
+#top_page_image {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Текст верхньої секції */
+#top_page_text {
+    font-family: 'Baskervville SC';
+    font-size: 18px;
+    color: #A4A4A4;
+    text-shadow: 0px 4px 24.9px #000000;
+    line-height: 1.8;
+    max-width: 500px;
+    text-align: justify;
+}
+
+/* Заголовки секцій */
+.heading {
+    font-family: 'Baskervville SC';
+    font-size: 78px;
+    color: #A8A8A8;
+    text-shadow: 0px 4px 82.2px #FFFFFF;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+/* Контейнери систем та екіпажу */
+.systems_container, .crew_container, .team_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+/* Елементи системи та члена екіпажу */
+.system, .crew_member, .team_member {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid #444;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* Ефект наведення на елементи */
+.system:hover, .crew_member:hover, .team_member:hover {
+    border-color: #A8A8A8;
+    background: rgba(40, 40, 40, 1);
+    transform: translateY(-5px);
+}
+
+/* Назви систем та ролі */
+.system_name, .crew_role, .team_role {
+    font-family: 'Cinzel';
+    font-size: 22px;
+    color: #A4A4A4;
+    text-shadow: 0px 4px 24.9px #000000;
+    margin: 0 0 15px 0;
+}
+
+/* Описи систем та членів екіпажу */
+.system_desc, .crew_desc, .team_desc {
+    font-family: 'Baskervville SC';
+    font-size: 16px;
+    color: #999;
+    line-height: 1.6;
+}
+
+/* Сітки цілей та активностей */
+.objectives, .activities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+/* Елементи цілей та активностей */
+.objective, .activity {
+    background: rgba(30, 30, 30, 0.8);
+    border-left: 3px solid #A8A8A8;
+    padding: 30px;
+    transition: 0.5s;
+}
+
+/* Ефект наведення на цілі та активності */
+.objective:hover, .activity:hover {
+    background: rgba(40, 40, 40, 1);
+    transform: translateX(10px);
+}
+
+/* Заголовки цілей та активностей */
+.objective h3, .activity h3 {
+    font-family: 'Cinzel';
+    font-size: 20px;
+    color: #A4A4A4;
+    margin: 0 0 15px 0;
+}
+
+/* Текст цілей та активностей */
+.objective p, .activity p {
+    font-family: 'Baskervville SC';
+    font-size: 16px;
+    color: #999;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Галерея зображень */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+/* Зображення галереї */
+.gallery_image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Ефект наведення на зображення галереї */
+.gallery_image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Заключний текст */
+.closing_text {
+    font-family: 'Baskervville SC';
+    font-size: 20px;
+    color: #A4A4A4;
+    text-align: center;
+    padding: 0 10%;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Кнопка повернення */
+.back_button {
+    display: inline-block;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    padding: 15px 40px;
+    background-color: #d9d9d913;
+    border: 1px solid #A4A4A4;
+    color: #9A9A9A;
+    text-decoration: none;
+    font-family: 'Cinzel';
+    font-size: 16px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.5s;
+    margin-bottom: 100px;
+}
+
+/* Ефект наведення на кнопку повернення */
+.back_button:hover {
+    background-color: white;
+    color: black;
+    padding: 15px 50px;
+}
+
+#artemis_title {
+    font-family: 'Bungee Hairline';
+    font-size: 96px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #928E8E;
+    opacity: 0.65;
+    text-shadow: 0px 4px 24.1px #000000;
+    margin: 0;
+    padding: 50px 0;
+    border-top: 1px solid white;
+}
+
+.landing_info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 10%;
+    margin-bottom: 80px;
+}
+
+.location_detail {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid #555;
+    padding: 30px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.location_detail:hover {
+    border-color: #A8A8A8;
+    background: rgba(40, 40, 40, 1);
+}
+
+.location_detail h2 {
+    font-family: 'Cinzel';
+    font-size: 20px;
+    color: #A4A4A4;
+    text-shadow: 0px 4px 24.9px #000000;
+    margin: 0 0 15px 0;
+}
+
+.location_detail p {
+    font-family: 'Baskervville SC';
+    font-size: 16px;
+    color: #999;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .top_page_container {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+    
+    #top_page_image {
+        width: 100%;
+        height: auto;
+    }
+    
+    #top_page_text {
+        max-width: 100%;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .objectives, .activities {
+        grid-template-columns: 1fr;
+    }
+    
+    .systems_container, .crew_container, .team_container, .landing_info {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+    
+    .system, .crew_member, .team_member, .location_detail {
+        width: 100%;
+    }
+}

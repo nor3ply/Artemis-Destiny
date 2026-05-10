@@ -1,0 +1,158 @@
+/* Стилі для сторінки Cosmos з планетами */
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: auto;
+    color: white;
+    background-image: url('ground.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: 0;
+    padding: 0;
+    min-height: 6000px;
+}
+
+/* Загальні стилі для всіх планет */
+.sun-image,
+.mercury-image,
+.venus-image,
+.earth-image,
+.mars-image,
+.jupiter-image,
+.saturn-image,
+.uranus-image,
+.neptune-image {
+    position: absolute;
+    top: 20vw;
+    transform: translateY(-50%);
+    height: auto;
+    filter: drop-shadow(0 0px 20px rgb(255, 255, 255));
+    transition: left 0.9s ease-in-out, top 0.9s ease-in-out, width 0.9s ease-in-out, transform 0.9s ease-in-out, filter 0.6s ease;
+    cursor: pointer;
+}
+
+/* Стиль для Сонця */
+.sun-image {
+    left: -30vw;
+    width: 40vw;
+    cursor: default;
+}
+
+/* Стиль для Меркурія */
+.mercury-image {
+    left: 10.5vw;
+    width: 4.4vw;
+}
+
+/* Стиль для Венери */
+.venus-image {
+    left: 16.4vw;
+    width: 8vw;
+}
+
+/* Стиль для Землі */
+.earth-image {
+    left: 25.9vw;
+    width: 8.8vw;
+}
+
+/* Стиль для Марса */
+.mars-image {
+    left: 36.2vw;
+    width: 5.9vw;
+}
+
+/* Стиль для Юпітера */
+.jupiter-image {
+    left: 43.6vw;
+    width: 15.4vw;
+}
+
+/* Стиль для Сатурна */
+.saturn-image {
+    left: 55vw;
+    width: 28vw;
+}
+
+/* Стиль для Урана */
+.uranus-image {
+    left: 79vw;
+    width: 8vw;
+}
+
+/* Стиль для Нептуна */
+.neptune-image {
+    left: 90vw;
+    width: 5.8vw;
+}
+
+/* Загальний клас для переміщеної планети */
+.moved {
+    left: 50vw !important;
+    top: 1500px !important;
+    width: 40vw !important;
+    transform: translateY(-50%) !important;
+}
+
+/* Текст інформаційної панелі */
+.info-text {
+    position: fixed;
+    left: -600px;
+    top: 60vh;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: monospace;
+    max-width: 380px;
+    border: 1px solid white;
+    transition: left 0.6s ease-out;
+    z-index: 100;
+}
+
+/* Клас для показу інформаційної панелі */
+.info-text.show {
+    left: 5vw;
+}
+
+/* Контейнер кнопок керування */
+.planet-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+/* Стилі для кнопок навігації та повернення */
+.nav-arrow,
+.back-main {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Ефект наведення на кнопки */
+.nav-arrow:hover:not(:disabled),
+.back-main:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+/* Стиль для вимкнених кнопок */
+.nav-arrow:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Стиль для кнопки повернення */
+.back-main {
+    flex: 1;
+    text-align: center;
+}

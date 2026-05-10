@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Інтерактивна сторінка Cosmos з планетами -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Solar sistem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Зображення Сонця -->
+        <img src="sun.png" alt="Солнце" class="sun-image">
+        <!-- Зображення планет -->
+        <img src="mercury.png" alt="Меркурий" class="mercury-image" id="mercury">
+        <img src="venus.png" alt="Венера" class="venus-image" id="venus">
+        <img src="Earth1.png" alt="Земля" class="earth-image" id="earth">
+        <img src="mars.png" alt="Марс" class="mars-image" id="mars">
+        <img src="jupiter.png" alt="Юпитер" class="jupiter-image" id="jupiter">
+        <img src="saturn.png" alt="Сатурн" class="saturn-image" id="saturn">
+        <img src="uranus.png" alt="Уран" class="uranus-image" id="uranus">
+        <img src="neptune.png" alt="Нептун" class="neptune-image" id="neptune">
+    </div>
+
+        <!-- Блок для інформації про планету -->
+    <div id="planetInfo" class="info-text">
+        <div id="planetData">
+            <strong>Name:</strong> Neptune<br>
+            <strong>Day temperature:</strong> ~-201°C (cloud tops)<br>
+            <strong>Night temperature:</strong> ~-201°C (relatively consistent)<br>
+            <strong>Order from the Sun:</strong> 8th<br>
+            <strong>Number of moons:</strong> 16 (known, including Triton, Nereid, Proteus)<br>
+            <strong>Features:</strong> Strongest winds in the solar system (up to 2,100 km/h)
+        </div>
+        <!-- Кнопки навігації -->
+        <div class="planet-controls">
+            <button id="prevPlanet" class="nav-arrow" disabled>&larr;</button>
+            <button id="nextPlanet" class="nav-arrow" disabled>&rarr;</button>
+            <a href="../index.html" class="back-main">Back to Main</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
