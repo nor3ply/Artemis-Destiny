@@ -48,15 +48,6 @@ body{
     padding: 0;
 }
 
-/* Фонове відео */
-#background_video{
-    position:fixed;
-    z-index:-1;
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-
 /* Контейнер верхнього банера */
 .top_banner_container {
     position: fixed;
