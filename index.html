@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!-- Головна сторінка проекту Artemis -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis: Choose Your Destiny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top_banner_container" >
+            <a class="top_banner_text" href="index.html">Artemis <br>Destiny</a>
+        </div>
+        <video autoplay muted loop id="background_video">
+            <source src="mainpage/Videos/background.mp4" type="video/mp4">
+        </video>
+    </header>
+    <main>
+        <!-- Верхня секція з вітальним текстом -->
+        <section class="top_page">
+            <div class="top_page_text_container">
+                <h1 class="top_page_mtext">WELCOME<br>TO ARTemis</h1>
+                <p class="top_page_btext">Step into the orbit of humanity's next lunar journey.<br>
+                    Explore legendary missions, meet the rockets that will carry us beyond Earth,<br>
+                    and decide which path leads to the Moon and beyond.<br>
+                    The future of space exploration begins here.<br>
+                    Prepare for launch...</p>
+                <a class="cosmos_button" href="Cosmos/index.html">Explore Cosmos →</a>
+            </div>
+        </section>
+        <!-- Секція з зображеннями реалмів -->
+        <section>
+            <h2 class="middle_page_mtext">Realms</h2>
+            <div class="middle_page_images">
+                <img class="middle_page_image" src="mainpage/images/realm1.jpg" alt="Realm 1">
+                <img class="middle_page_image" src="mainpage/images/realm2.jpg" alt="Realm 2">
+                <img class="middle_page_image" src="mainpage/images/realm3.jpg" alt="Realm 3">
+            </div>
+        </section>
+        <!-- Секція вибору місій Artemis -->
+        <section>
+            <h2 class="bottom_page_mtext">CHOOSE YOUR DESTINY</h2>
+            <div class="artemis_align">
+                <div class="artemis_banner">
+                    <h3 class="artemis_mtext">ARTEMIS I</h3>
+                    <p class="artemis_text">The first step on a journey
+                        to reclaim the stars. A rocket of
+                        unmatched power launches
+                        unmanned toward the heavens.
+                        Testing the limits of human
+                        engineering, it paves the way
+                        for those who will follow. The
+                        future begins here, where
+                        ambition meets the cosmos.</p>
+                    <a class="artemis_button" href="artemis1-page/index.html">Want to know more?</a>
+                    <img class="artemis_image" src="mainpage/images/mission1.jpg" alt="Artemis I mission image">
+                </div>
+            </div>
+            <!-- Альтернативна секція для Artemis II -->
+            <div class="artemis_align_alt">
+                <div class="artemis_banner_alt">
+                    <h3 class="artemis_mtext_alt">ARTEMIS II</h3>
+                    <p class="artemis_text_alt">Humans return to the lunar 
+                        realm. A brave crew, chosen from
+                        the finest, orbits the moon in a 
+                        daring expedition. They carry with
+                        them the dreams of millions,
+                        the hope of generations. This 
+                        marks the threshold between 
+                        the forgotten and the remembered.</p>
+                        <a class="artemis_button_alt" href="artemis2-page/index.html">Want to know more?</a>
+                    <img class="artemis_image_alt" src="mainpage/images/mission2.jpg" alt="Artemis II mission image">
+                </div>
+            </div>
+        </section>
+        <!-- Секція вікторини -->
+        <section id="test">
+            <h1 class="bottom_page_mtext">ARTEMIS KNOWLEDGE TEST</h1>
+            <div class="test_container">
+                <!-- Екран початку -->
+                <div id="start-screen" class="screen">
+                    <h2>Mission Briefing</h2>
+                    <p>Prepare for the Artemis quiz. Answer each question to prove your readiness for lunar exploration.</p>
+                    <button id="start-btn" class="start-button">Begin Mission</button>
+                </div>
+
+                <!-- Екран питань -->
+                <div id="quiz-screen" class="screen hide">
+                    <div class="quiz-header">
+                        <span id="timer">Time: 15</span>
+                        <span id="score-display">Score: 0</span>
+                    </div>
+                    <h2 id="question-text">Question text</h2>
+                    <div id="answers-container"></div>
+                </div>
+
+                <!-- Екран результатів -->
+                <div id="result-screen" class="screen hide">
+                    <h2>Mission Complete</h2>
+                    <p id="result-text"></p>
+                    <button id="restart-btn" class="start-button">Restart Mission</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Футер з соціальними мережами -->
+    <footer>
+        <section class="bottom_banner">
+            <h1 id="artemis_title">ARТEMIS DESTINY</h1>
+            <div class="social">
+                <a class="bottom_images" href="https://www.tiktok.com/"><img class="bottom_banner_image" src="mainpage/images/tiktok.png" alt="TikTok"></a>
+                <a class="bottom_images" href="https://x.com/"><img class="bottom_banner_image" src="mainpage/images/twitter.png" alt="X"></a>
+                <a class="bottom_images" href="https://www.instagram.com/"><img class="bottom_banner_image" src="mainpage/images/instagram.png" alt="Instagram"></a>
+            </div>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

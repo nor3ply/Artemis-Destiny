@@ -1,0 +1,609 @@
+/* Стилі для головної сторінки Artemis */
+@font-face {
+    font-family: "Baskervville SC";
+    src: url("fonts/BaskervvilleSC-Regular.ttf");
+}
+@font-face {
+    font-family: 'Cinzel';
+    src: url("fonts/Cinzel-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Benne";
+    src: url("fonts/Benne-Regular.ttf");
+}
+@font-face {
+    font-family: "Bungee Hairline";
+    src: url("fonts/BungeeHairline-Regular.ttf");
+}
+
+/* Анімації появи елементів */
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+    from { transform: translateX(200%); }
+    to { transform: translateX(0); }
+}
+
+/* Стилі для нижніх зображень з анімацією */
+.bottom_images {
+    animation: appear 0.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+/* Основні стилі тіла сторінки */
+body{
+    background-color: black;
+    animation: appear 2s linear;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Фонове відео */
+#background_video{
+    position:fixed;
+    z-index:-1;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/* Контейнер верхнього банера */
+.top_banner_container {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+/* Текст верхнього банера */
+.top_banner_text{
+    margin-left:40px;
+    text-align: center;
+    font-family: "Baskervville SC";
+    font-size: 20px;
+    letter-spacing: 3px;
+    color:white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Верхня секція сторінки */
+.top_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Контейнер тексту верхньої секції */
+.top_page_text_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Головний текст верхньої секції */
+.top_page_mtext{
+    position:relative;
+    top:70px;
+    text-align: center;
+    font-family: 'Almendra';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+    line-height: 75.94%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #8E8E8E;
+    text-shadow: 4px 13px 170.3px #FFFFFF;
+}
+
+/* Допоміжний текст верхньої секції */
+.top_page_btext{
+    font-family: 'Wittgenstein';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 105%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #B1B1B1;
+}
+
+/* Кнопка переходу до Cosmos */
+.cosmos_button{
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    border-radius: 20px;
+    background-color: #d9d9d913;
+    border: 1px solid #A4A4A4;
+    text-decoration: none;
+    color: #9A9A9A;
+    font-family: 'Cinzel';
+    font-size: 18px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.cosmos_button:hover{
+    background-color: white;
+    color: black;
+    padding: 15px 50px;
+    border-color: white;
+}
+
+/* Заголовок середньої секції */
+.middle_page_mtext {
+    font-family: 'Baskervville SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 75.94%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #A8A8A8;
+    text-shadow: 0px 4px 82.2px #FFFFFF;
+    animation: appear 1.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+}
+
+/* Зображення середньої секції */
+.middle_page_image {
+    width: 457px;
+    height: 767px;
+    animation: appear 1.5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    transition: 0.5s ease-out;
+    object-fit: cover;
+}
+
+.middle_page_image:hover{
+    transform: scale(110%);
+}
+
+/* Контейнер зображень середньої секції */
+.middle_page_images{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+/* Заголовок нижньої секції */
+.bottom_page_mtext{
+    font-family: 'Baskervville SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 78px;
+    line-height: 75.94%;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #A8A8A8;
+    text-shadow: 0px 4px 82.2px #FFFFFF;
+}
+
+/* Банер Artemis I */
+.artemis_banner {
+    color: white;
+    position: relative;
+    display: flex;
+    animation: slide-in-left 1.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.artemis_align{
+    display: flex;
+    justify-content: left;
+    margin-left:10%
+}
+
+.artemis_mtext{
+    position:absolute;
+    top:-20px;
+    left:350px;
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #A4A4A4;
+    text-shadow: 0px 4px 24.9px #000000;  
+}
+
+.artemis_text{
+    text-align: center;
+    position: absolute;
+    left:450px;
+    top:100px;
+    font-size:19px;
+    font-family: 'Baskervville SC';
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #A4A4A4;
+    text-shadow: 0px 4px 24.9px #000000;
+    width: 401px;
+}
+
+.artemis_button{
+    position:absolute;
+    top:450px;
+    left:750px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 14px 22px;
+    text-decoration: none;
+    color:#FFFFFF;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-family: 'Cinzel';
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.artemis_button:hover{
+    background-color: rgba(255, 255, 255, 0.95);
+    color:black;
+    transform: translateY(-2px);
+    padding: 14px 22px;
+}
+
+/* Зображення Artemis I */
+.artemis_image{
+    width: 950px;
+    object-fit: cover;
+}
+
+/* Банер Artemis II */
+.artemis_banner_alt {
+    display: flex;
+    color: white;
+    position: relative;
+    animation: slide-in-right 1.5s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Вирівнювання банера Artemis II */
+.artemis_align_alt{
+    display: flex;
+    justify-content: right;
+    margin-right: 10%;
+}
+
+/* Заголовок Artemis II */
+.artemis_mtext_alt{
+    position:absolute;
+    top:-20px;
+    left:350px;
+    font-family: 'Benne';
+    font-style: normal;
+    font-size: 34px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #A4A4A4;
+    text-shadow: 0px 4px 24.9px #000000;  
+}
+
+.artemis_text_alt{
+    text-align: center;
+    position: absolute;
+    left:100px;
+    top:150px;
+    font-size:24px;
+    font-family: 'Benne';
+    font-style: normal;
+    text-align: center;
+    word-spacing: -1px;
+    line-height: 30px;
+    color: #A4A4A4;
+    text-shadow: 10px 10px 24.9px #000000;
+    width: 401px;
+}
+
+.artemis_button_alt{
+    position:absolute;
+    top:450px;
+    left:50px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 14px 22px;
+    text-decoration: none;
+    color:#FFFFFF;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-family: 'Cinzel';
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.artemis_button_alt:hover{
+    background-color: rgba(255, 255, 255, 0.95);
+    color:black;
+    transform: translateY(-2px);
+    padding: 14px 22px;
+}
+
+/* Зображення Artemis II */
+.artemis_image_alt{
+    width: 950px;
+    object-fit: cover;
+}
+
+/* Заголовок футера */
+#artemis_title{
+    font-family: 'Bungee Hairline';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #928E8E;
+    opacity: 0.65;
+    text-shadow: 0px 4px 24.1px #000000;
+    margin:0px;
+}
+
+/* Нижній банер */
+.bottom_banner{
+    border-top: 1px solid white;
+    margin-top: 100px;
+    padding-top: 30px;
+}
+
+/* Соціальні мережі */
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Зображення соціальних мереж */
+.bottom_banner_image{
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.bottom_banner_image:hover{
+    transform: scale(120%);
+}
+
+/* Контейнер вікторини */
+.test_container {
+    background: transparent;
+    border: none;
+    padding: 20px 0;
+    margin: 50px auto;
+    max-width: 920px;
+    width: min(100%, 920px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test_question {
+    margin-bottom: 30px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 4px solid rgba(255, 255, 255, 0.55);
+    width: 100%;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+.test_question h3 {
+    font-family: 'Cinzel';
+    font-size: 20px;
+    color: #F3F3F3;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.35);
+    margin: 0 0 24px 0;
+}
+
+.test_question label {
+    display: block;
+    font-family: 'Baskervville SC';
+    font-size: 16px;
+    color: #E8E8E8;
+    padding: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 14px;
+}
+
+.test_question label:hover {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.test_question input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Кнопка відправки вікторини */
+.submit_button {
+    display: block;
+    margin: 40px auto 0;
+    padding: 16px 56px;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #F4F4F4;
+    font-family: 'Cinzel';
+    font-size: 18px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background 0.35s ease, transform 0.35s ease;
+}
+
+.submit_button:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+    color: #111;
+    transform: translateY(-1px);
+}
+
+/* Секція результатів */
+.results_section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.results_section h2 {
+    font-family: 'Cinzel';
+    font-size: 22px;
+    color: #F7F7F7;
+    margin-bottom: 15px;
+}
+
+.results_section p {
+    font-family: 'Baskervville SC';
+    color: #EDEDED;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+
+.start-button {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 15px 50px;
+    background-color: rgba(217, 217, 217, 0.08);
+    border: 1px solid #A4A4A4;
+    color: #E8E8E8;
+    font-family: 'Cinzel';
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+.screen {
+    background: rgba(20, 20, 20, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    padding: 34px;
+    width: min(100%, 760px);
+    max-width: 760px;
+    text-align: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.screen h2 {
+    color: #FFFFFF;
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+}
+
+.screen p {
+    color: rgba(255, 255, 255, 0.78);
+    font-family: 'Baskervville SC';
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 28px;
+}
+
+.hide {
+    display: none;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+    font-family: 'Cinzel';
+    color: #A4A4A4;
+}
+
+#answers-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.answer-btn {
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(164, 164, 164, 0.25);
+    color: #E8E8E8;
+    font-family: 'Baskervville SC';
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.answer-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+.answer-btn.correct {
+    background-color: #2a5e2d;
+    color: #fff;
+    border-color: #4f9b4b;
+}
+
+.answer-btn.wrong {
+    background-color: #7f1616;
+    color: #fff;
+    border-color: #c33838;
+}
+
+#result-text {
+    font-family: 'Baskervville SC';
+    font-size: 18px;
+    color: #A4A4A4;
+    line-height: 1.8;
+    margin: 20px 0 0;
+}
